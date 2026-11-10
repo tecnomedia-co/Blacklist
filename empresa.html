@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blacklist empresas colombia</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="container page-content">
+    <a class="back-link" href="empresas.html">← Volver a la lista</a>
+    <section id="company-detail" class="company-card"></section>
+    <section class="reviews-section">
+      <div class="section-title-row">
+        <div><p class="eyebrow">Experiencias</p><h2>Opiniones de usuarios</h2></div>
+        <button id="add-review-button" class="button button-primary" type="button">Añadir opinión</button>
+      </div>
+      <div id="reviews-list" class="reviews-list"></div>
+    </section>
+    <section id="review-form-section" class="review-form-card" hidden>
+      <h2>Comparte tu experiencia</h2>
+      <form id="review-form">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="review-name">Nombre completo</label>
+            <input id="review-name" name="name" type="text" maxlength="100" required placeholder="Tu nombre">
+          </div>
+          <div class="form-field">
+            <label for="review-date">Fecha</label>
+            <input id="review-date" name="date" type="date" required readonly>
+          </div>
+        </div>
+        <fieldset class="form-field rating-field">
+          <legend>Calificación</legend>
+          <div class="star-picker" role="radiogroup" aria-label="Calificación de 1 a 5 estrellas">
+            <input type="radio" id="star-5" name="rating" value="5" required><label for="star-5" title="5 estrellas">★</label>
+            <input type="radio" id="star-4" name="rating" value="4"><label for="star-4" title="4 estrellas">★</label>
+            <input type="radio" id="star-3" name="rating" value="3"><label for="star-3" title="3 estrellas">★</label>
+            <input type="radio" id="star-2" name="rating" value="2"><label for="star-2" title="2 estrellas">★</label>
+            <input type="radio" id="star-1" name="rating" value="1"><label for="star-1" title="1 estrella">★</label>
+          </div>
+          <small>Selecciona una estrella (1) o cinco estrellas (5).</small>
+        </fieldset>
+        <div class="form-field">
+          <label for="review-text">Tu opinión</label>
+          <textarea id="review-text" name="text" rows="5" minlength="10" maxlength="1500" required placeholder="Cuéntanos cómo fue tu experiencia..."></textarea>
+        </div>
+        <div class="form-actions">
+          <button class="button button-primary" type="submit">Publicar opinión</button>
+          <button id="cancel-review-button" class="button button-secondary" type="button">Cancelar</button>
+        </div>
+        <p id="form-message" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+</body>
+</html>
